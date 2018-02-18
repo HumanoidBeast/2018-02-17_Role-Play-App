@@ -27,26 +27,26 @@ public class PlayerProfile : MonoBehaviour {
 	public GameObject EmpathyInstincts;
 
 
-	public void Calc (int Value)
+	public void Calc (int Value, int result)
 	{
+
 		if (Value ==2 ){
-			Value = 5;
+			result = 5;
 		}
-		if (Value ==3 ){
-			Value = 4;
+		else if (Value ==3 ){
+			result = 4;
 		}
-		if (Value ==4 ){
-			Value = 3;
+		else if (Value ==4 ){
+			result = 3;
 		}
-		if (Value ==5 ){
-			Value = 2;
+		else if (Value ==5 ){
+			result = 2;
 		}
-		fast = Value;
-		smart = Value;
-		lucky = Value;
-		empathy = Value;
+		print (result);
 
 	}
+
+
 
 	public void valueChangeFastHeavy ()
 	{
@@ -70,16 +70,20 @@ public class PlayerProfile : MonoBehaviour {
 
 	public void Accept ()
 	{
-		Calc (fastHeavy);
-		Calc (smartStrong);
-		Calc (luckyHandy);
-		Calc (empathyInstincts);
+		Calc (fastHeavy,fast);
+		Calc (smartStrong,smart);
+		Calc (luckyHandy,lucky);
+		Calc (empathyInstincts,empathy);
 
-
+	
 		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
+
 		endurancePoints = 2 * fast + smartStrong + luckyHandy;
+
 		psychoPoints = 2 * empathy + smart + lucky;
+
 		specialPoints = 2 * smart + lucky + empathy;
 
 	}
+
 }
