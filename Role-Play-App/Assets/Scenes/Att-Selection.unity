@@ -4855,10 +4855,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b892d660c34dd4980354cbfa75bf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fastHeavy: 0
-  smartStrong: 0
-  luckyHandy: 0
-  empathyInstincts: 0
+  fastHeavy: 2
+  smartStrong: 2
+  luckyHandy: 2
+  empathyInstincts: 2
   lifePoints: 0
   endurancePoints: 0
   psychoPoints: 0
@@ -4867,6 +4867,7 @@ MonoBehaviour:
   SmartStrong: {fileID: 1950713585}
   LuckyHandy: {fileID: 742538415}
   EmpathyInstincts: {fileID: 513613154}
+  healthbar: {fileID: 1579802899}
 --- !u!114 &1457205465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5310,6 +5311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 1579802899}
+  attribute: {fileID: 1457205463}
 --- !u!1 &1711883476
 GameObject:
   m_ObjectHideFlags: 0

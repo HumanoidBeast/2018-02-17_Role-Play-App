@@ -4,10 +4,10 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerProfile : MonoBehaviour {
-	public int fastHeavy;
-	public int smartStrong;
-	public int luckyHandy;
-	public int empathyInstincts;
+	public int fastHeavy = 2;
+	public int smartStrong = 2;
+	public int luckyHandy = 2;
+	public int empathyInstincts = 2;
 
 	public int lifePoints;
 	public int endurancePoints;
@@ -28,6 +28,7 @@ public class PlayerProfile : MonoBehaviour {
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
 	public GameObject EmpathyInstincts;
+	public Slider healthbar;
 
 	string FAST;
 	string SMART;
@@ -115,6 +116,8 @@ public class PlayerProfile : MonoBehaviour {
 		psychoPoints = 2 * realempathy + realsmart + reallucky;
 
 		specialPoints = 2 * realsmart + reallucky + realempathy;
+
+		healthbar.GetComponent<PlayerHealth> ().setLife ();
 
 	}
 
