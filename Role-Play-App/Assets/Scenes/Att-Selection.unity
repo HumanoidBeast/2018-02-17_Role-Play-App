@@ -2010,8 +2010,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1011197, y: -89.33008}
-  m_SizeDelta: {x: 1049.9, y: 62.8}
+  m_AnchoredPosition: {x: -14.02, y: -89.33008}
+  m_SizeDelta: {x: 826.7, y: 62.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465189777
 MonoBehaviour:
@@ -2348,8 +2348,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000052452, y: 36.270325}
-  m_SizeDelta: {x: 1049.9, y: 62.8}
+  m_AnchoredPosition: {x: -14.1, y: 36.270325}
+  m_SizeDelta: {x: 826.7, y: 62.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575845383
 MonoBehaviour:
@@ -4955,8 +4955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.10109204, y: -26.529907}
-  m_SizeDelta: {x: 1049.9, y: 62.8}
+  m_AnchoredPosition: {x: -14.02, y: -26.529907}
+  m_SizeDelta: {x: 826.7, y: 62.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490959439
 MonoBehaviour:
@@ -5222,6 +5222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579802898}
   - component: {fileID: 1579802899}
+  - component: {fileID: 1579802900}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -5246,8 +5247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.10111666, y: 99.07013}
-  m_SizeDelta: {x: 1049.9, y: 62.8}
+  m_AnchoredPosition: {x: -14.02, y: 99.07013}
+  m_SizeDelta: {x: 826.7, y: 62.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579802899
 MonoBehaviour:
@@ -5289,7 +5290,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5297,6 +5298,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1579802900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1579802897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca957326e71cd3c4ca938b92abef521c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 1579802899}
 --- !u!1 &1711883476
 GameObject:
   m_ObjectHideFlags: 0
