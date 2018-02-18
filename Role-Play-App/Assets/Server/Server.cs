@@ -105,12 +105,31 @@ public class Server : MonoBehaviour {
 		clients.Add (new serverClient (listener.EndAcceptTcpClient (ar)));
 		startListening ();
 		//send message someone connected to server
+
+		Broadcast (clients [clients.Count - 1].clientName + " has connected", clients);
 	}
 
 	private void OnIncommingData(serverClient c, string data){
 
 		Debug.Log (c.clientName + " has send the following message : " + data);
 
+	}
+
+	private void Broadcast (string data, List<serverClient> cl){ 
+	
+		foreach (serverClient c in cl) {
+
+			try {
+				StreamWriter writer = new StreamWriter(c.tcp.GetStream());
+				writer.WriteLine(data);
+				writer.Flush();
+			}
+			catch(Exception e){
+				Debug.Log ("write error : " + e.Message + " to client " + c.clientName);
+			}
+
+		}
+	
 	}
 }
 

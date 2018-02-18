@@ -54,11 +54,18 @@ public class Client : MonoBehaviour {
 		
 			if (stream.DataAvailable) {
 
-
-
+				string data = reader.ReadLine ();
+				if (data != null)
+					OnIncomingData (data);
 			}
 
 		}
+
+	}
+
+	private void OnIncomingData (string data){
+
+		Debug.Log ("server: " + data);
 
 	}
 
