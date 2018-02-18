@@ -28,7 +28,11 @@ public class PlayerProfile : MonoBehaviour {
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
 	public GameObject EmpathyInstincts;
+
 	public Slider healthbar;
+	public Slider endurancebar;
+	public Slider psychobar;
+	public Slider specialbar;
 
 	string FAST;
 	string SMART;
