@@ -18,26 +18,33 @@ public class PlayerProfile : MonoBehaviour {
 	public int psychoPoints;
 	public int specialPoints;
 	[Space(10)]
-	[Header("Attributes")]
+	[Header("DropDown Attributes")]
 
 	public GameObject FastHeavy;
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
 	public GameObject EmpathyInstincts;
 	[Space(10)]
-	[Header("Sliders")]
+	[Header("Sliders Attributes")]
 
 	public Slider healthbar;
 	public Slider endurancebar;
 	public Slider psychobar;
 	public Slider specialbar;
 	[Space(10)]
-	[Header("BarPointText")]
+	[Header("AttributeBarPointCounts")]
 
-	public Text HPCountText;
-	public Text APCountText;
-	public Text MPCountText;
-	public Text PPCountText;
+	public Text HPCount;
+	public Text APCount;
+	public Text MPCount;
+	public Text PPCount;
+	[Space(10)]
+	[Header("AttributePointCounts")]
+
+	public Text FastHeavyCount;
+	public Text SmartStrongCount;
+	public Text LuckyHandyCount;
+	public Text EmpathyInstinctsCount;
 
 	string FAST;
 	string SMART;
@@ -90,21 +97,25 @@ public class PlayerProfile : MonoBehaviour {
 	public void valueChangeFastHeavy ()
 	{
 		fastHeavy = FastHeavy.GetComponent<Dropdown>().value + 2;
+		FastHeavyCount.text = fastHeavy.ToString();
 	}
 
 	public void valueChangeSmartStrong ()
 	{
 		smartStrong = SmartStrong.GetComponent<Dropdown>().value + 2;
+		SmartStrongCount.text = smartStrong.ToString();
 	}
 
 	public void valueChangeLuckyHandy ()
 	{
 		luckyHandy = LuckyHandy.GetComponent<Dropdown>().value + 2;
+		LuckyHandyCount.text = luckyHandy.ToString();
 	}
 
 	public void valueChangeEmpathyInstincts ()
 	{
 		empathyInstincts = EmpathyInstincts.GetComponent<Dropdown>().value + 2;
+		EmpathyInstinctsCount.text = empathyInstincts.ToString();
 	}
 
 
@@ -124,19 +135,19 @@ public class PlayerProfile : MonoBehaviour {
 				
 		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
 		setLife (healthbar, lifePoints);
-		HPCountText.text = lifePoints.ToString();
+		HPCount.text = lifePoints.ToString();
 
 		endurancePoints = 2 * realfast + smartStrong + luckyHandy;
 		setLife (endurancebar, endurancePoints);
-		APCountText.text = endurancePoints.ToString();
+		APCount.text = endurancePoints.ToString();
 
 		psychoPoints = 2 * realempathy + realsmart + reallucky;
 		setLife (psychobar, psychoPoints);
-		MPCountText.text = psychoPoints.ToString();
+		MPCount.text = psychoPoints.ToString();
 
 		specialPoints = 2 * realsmart + reallucky + realempathy;
 		setLife (specialbar, specialPoints);
-		PPCountText.text = specialPoints.ToString();
+		PPCount.text = specialPoints.ToString();
 
 	}
 
