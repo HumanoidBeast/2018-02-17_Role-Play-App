@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
 
-	public int Value;
+
 	// Use this for initialization
-	void Start () {
+	void calc (int value) {
 		
 	}
 	

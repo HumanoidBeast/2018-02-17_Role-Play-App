@@ -4945,8 +4945,8 @@ MonoBehaviour:
   EmpathyInstincts: {fileID: 513613154}
   healthbar: {fileID: 1579802899}
   endurancebar: {fileID: 575845383}
-  psychobar: {fileID: 1490959439}
-  specialbar: {fileID: 465189777}
+  psychobar: {fileID: 465189777}
+  specialbar: {fileID: 1490959439}
 --- !u!114 &1457205465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5377,7 +5377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1579802898}
   - component: {fileID: 1579802899}
-  - component: {fileID: 1579802900}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -5454,26 +5453,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1579802900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1579802897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca957326e71cd3c4ca938b92abef521c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthbar: {fileID: 1579802899}
-  endurancebar: {fileID: 575845383}
-  psychobar: {fileID: 1490959439}
-  specialbar: {fileID: 465189777}
-  maxhealth: {fileID: 1782144322}
-  maxendurance: {fileID: 1009782945}
-  maxpsycho: {fileID: 1512255933}
-  maxspecial: {fileID: 1819086605}
-  attribute: {fileID: 1457205463}
 --- !u!1 &1711883476
 GameObject:
   m_ObjectHideFlags: 0

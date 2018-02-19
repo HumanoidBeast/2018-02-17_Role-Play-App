@@ -4,30 +4,28 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerProfile : MonoBehaviour {
+	[Header("Player Stats")]
+
 	public int fastHeavy = 2;
 	public int smartStrong = 2;
 	public int luckyHandy = 2;
 	public int empathyInstincts = 2;
+	[Space(10)]
+	[Header("Player Points")]
 
 	public int lifePoints;
 	public int endurancePoints;
 	public int psychoPoints;
 	public int specialPoints;
-
-	private int fast;
-	private int smart;
-	private int lucky;
-	private int empathy;
-
-	private int realfast;
-	private int realsmart;
-	private int reallucky;
-	private int realempathy;
+	[Space(10)]
+	[Header("Attributes")]
 
 	public GameObject FastHeavy;
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
 	public GameObject EmpathyInstincts;
+	[Space(10)]
+	[Header("Sliders")]
 
 	public Slider healthbar;
 	public Slider endurancebar;
@@ -38,6 +36,16 @@ public class PlayerProfile : MonoBehaviour {
 	string SMART;
 	string LUCKY;
 	string EMPATHHY;
+
+	private int fast;
+	private int smart;
+	private int lucky;
+	private int empathy;
+
+	private int realfast;
+	private int realsmart;
+	private int reallucky;
+	private int realempathy;
 
 	public void Calc (int Value, string Name)
 	{
@@ -114,15 +122,41 @@ public class PlayerProfile : MonoBehaviour {
 		print (realempathy);*/
 			
 		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
+		setLife (healthbar, lifePoints);
 
 		endurancePoints = 2 * realfast + smartStrong + luckyHandy;
+		setLife (endurancebar, endurancePoints);
 
 		psychoPoints = 2 * realempathy + realsmart + reallucky;
+		setLife (psychobar, psychoPoints);
 
 		specialPoints = 2 * realsmart + reallucky + realempathy;
-
-		healthbar.GetComponent<PlayerHealth> ().setLife ();
+		setLife (specialbar, specialPoints);
 
 	}
 
+/// <summary>
+/// Sets the life.
+/// </summary>
+/// <param name="Bar">Bar.</param>
+/// <param name="Points">Points.</param>
+
+	public void setLife (Slider Bar, int Points) {
+
+		Bar.maxValue = Points;
+		Bar.value = Points;
+	}
+
+
+	public void takeDamage(int dmg, Slider Bar){
+
+		if (Bar.value == 0)
+			return;
+
+		Bar.value -= dmg;
+
+		Debug.Log ("damage taken: " + dmg.ToString());
+	}
+
 }
+
