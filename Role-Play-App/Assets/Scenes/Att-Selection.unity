@@ -3211,7 +3211,7 @@ GameObject:
   - component: {fileID: 1009782946}
   - component: {fileID: 1009782945}
   m_Layer: 5
-  m_Name: Text
+  m_Name: APCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4947,6 +4947,10 @@ MonoBehaviour:
   endurancebar: {fileID: 575845383}
   psychobar: {fileID: 465189777}
   specialbar: {fileID: 1490959439}
+  HPCountText: {fileID: 1782144322}
+  APCountText: {fileID: 1009782945}
+  MPCountText: {fileID: 1512255933}
+  PPCountText: {fileID: 1819086605}
 --- !u!114 &1457205465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4999,7 +5003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: -137.4}
+  m_AnchoredPosition: {x: 0.000015258789, y: -137.45}
   m_SizeDelta: {x: -943.5, y: 274.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1490959437
@@ -5098,7 +5102,7 @@ GameObject:
   - component: {fileID: 1512255934}
   - component: {fileID: 1512255933}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MPCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5839,7 +5843,7 @@ GameObject:
   - component: {fileID: 1782144323}
   - component: {fileID: 1782144322}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HPCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6084,7 +6088,7 @@ GameObject:
   - component: {fileID: 1819086606}
   - component: {fileID: 1819086605}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PPCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

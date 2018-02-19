@@ -31,6 +31,13 @@ public class PlayerProfile : MonoBehaviour {
 	public Slider endurancebar;
 	public Slider psychobar;
 	public Slider specialbar;
+	[Space(10)]
+	[Header("BarPointText")]
+
+	public Text HPCountText;
+	public Text APCountText;
+	public Text MPCountText;
+	public Text PPCountText;
 
 	string FAST;
 	string SMART;
@@ -114,32 +121,25 @@ public class PlayerProfile : MonoBehaviour {
 
 		Calc (empathyInstincts, EMPATHHY);
 		realempathy = empathy;
-
-		//Calculater TEST//
-		/*print (realfast);
-		print (realsmart);
-		print (reallucky);
-		print (realempathy);*/
-			
+				
 		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
 		setLife (healthbar, lifePoints);
+		HPCountText.text = lifePoints.ToString();
 
 		endurancePoints = 2 * realfast + smartStrong + luckyHandy;
 		setLife (endurancebar, endurancePoints);
+		APCountText.text = endurancePoints.ToString();
 
 		psychoPoints = 2 * realempathy + realsmart + reallucky;
 		setLife (psychobar, psychoPoints);
+		MPCountText.text = psychoPoints.ToString();
 
 		specialPoints = 2 * realsmart + reallucky + realempathy;
 		setLife (specialbar, specialPoints);
+		PPCountText.text = specialPoints.ToString();
 
 	}
 
-/// <summary>
-/// Sets the life.
-/// </summary>
-/// <param name="Bar">Bar.</param>
-/// <param name="Points">Points.</param>
 
 	public void setLife (Slider Bar, int Points) {
 
