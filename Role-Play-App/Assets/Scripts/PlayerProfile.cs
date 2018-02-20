@@ -5,45 +5,45 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerProfile : MonoBehaviour {
-	
+
+
 	[Header("Player Stats")]
-
-	public int fastHeavy = 2;
-	public int smartStrong = 2;
-	public int luckyHandy = 2;
-	public int empathyInstincts = 2;
+	public static int fastHeavy;
+	public static int smartStrong;
+	public static int luckyHandy;
+	public static int empathyInstincts;
 	[Space(10)]
+
+
 	[Header("Player Points")]
-
-	public int lifePoints;
-	public int endurancePoints;
-	public int psychoPoints;
-	public int specialPoints;
-
+	public static int lifePoints;
+	public static int endurancePoints;
+	public static int psychoPoints;
+	public static int specialPoints;
 	[Space(10)]
-	[Header("DropDown Attributes")]
 
+	[Header("DropDown Attributes")]
 	public GameObject FastHeavy;
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
 	public GameObject EmpathyInstincts;
 	[Space(10)]
-	[Header("Sliders Attributes")]
 
+	[Header("Sliders Attributes")]
 	public Slider healthbar;
 	public Slider endurancebar;
 	public Slider psychobar;
 	public Slider specialbar;
 	[Space(10)]
-	[Header("AttributeBarPointCounts")]
 
+	[Header("AttributeBarPointCounts")]
 	public Text HPCount;
 	public Text APCount;
 	public Text MPCount;
 	public Text PPCount;
 	[Space(10)]
-	[Header("AttributePointCounts")]
 
+	[Header("AttributePointCounts")]
 	public Text FastHeavyCount;
 	public Text SmartStrongCount;
 	public Text LuckyHandyCount;
@@ -64,6 +64,13 @@ public class PlayerProfile : MonoBehaviour {
 	private int reallucky;
 	private int realempathy;
 
+	void Update()
+	{
+		Scene scene = SceneManager.GetActiveScene ();
+		if (scene.name != "Att-Selection") {
+			ReCalcStats ();
+		}
+	}
 
 	public void Calc (int Value, string Name)
 	{
@@ -125,37 +132,48 @@ public class PlayerProfile : MonoBehaviour {
 
 	public void Accept ()
 	{
+		if (fastHeavy == 0 | smartStrong == 0 | luckyHandy == 0 | empathyInstincts == 0) {
+			return;
+		}
 		Calc (fastHeavy, FAST);
 		realfast = fast;
-		FastHeavyCount.text = fastHeavy.ToString();
+		FastHeavyCount.text = fastHeavy.ToString ();
+		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
 
 		Calc (smartStrong, SMART);
 		realsmart = smart;
-		SmartStrongCount.text = smartStrong.ToString();
+		SmartStrongCount.text = smartStrong.ToString ();
+		endurancePoints = 2 * realfast + smartStrong + luckyHandy;
 
 		Calc (luckyHandy, LUCKY);
 		reallucky = lucky;
-		LuckyHandyCount.text = luckyHandy.ToString();
+		LuckyHandyCount.text = luckyHandy.ToString ();
+		psychoPoints = 2 * realempathy + realsmart + reallucky;
 
 		Calc (empathyInstincts, EMPATHHY);
 		realempathy = empathy;
-		EmpathyInstinctsCount.text = empathyInstincts.ToString();
+		EmpathyInstinctsCount.text = empathyInstincts.ToString ();
+		specialPoints = 2 * realsmart + reallucky + realempathy;
 
+		ReCalcStats ();
 
+	}
+	void ReCalcStats()
+	{
 				
-		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
+		FastHeavyCount.text = fastHeavy.ToString ();
 		setLife (healthbar, lifePoints);
 		HPCount.text = lifePoints.ToString();
 
-		endurancePoints = 2 * realfast + smartStrong + luckyHandy;
+		SmartStrongCount.text = smartStrong.ToString ();
 		setLife (endurancebar, endurancePoints);
 		APCount.text = endurancePoints.ToString();
 
-		psychoPoints = 2 * realempathy + realsmart + reallucky;
+		LuckyHandyCount.text = luckyHandy.ToString ();
 		setLife (psychobar, psychoPoints);
 		MPCount.text = psychoPoints.ToString();
 
-		specialPoints = 2 * realsmart + reallucky + realempathy;
+		EmpathyInstinctsCount.text = empathyInstincts.ToString ();
 		setLife (specialbar, specialPoints);
 		PPCount.text = specialPoints.ToString();
 
@@ -182,6 +200,7 @@ public class PlayerProfile : MonoBehaviour {
 	public void LoadNextScene(string level)
 	{
 		SceneManager.LoadScene (level);
+
 	}
 
 }
