@@ -23,6 +23,7 @@ public class PlayerProfile : MonoBehaviour {
 	[Space(10)]
 
 	[Header("DropDown Attributes")]
+	[Space(5)]
 	public GameObject FastHeavy;
 	public GameObject SmartStrong;
 	public GameObject LuckyHandy;
@@ -30,6 +31,7 @@ public class PlayerProfile : MonoBehaviour {
 	[Space(10)]
 
 	[Header("Sliders Attributes")]
+	[Space(5)]
 	public Slider healthbar;
 	public Slider endurancebar;
 	public Slider psychobar;
@@ -37,6 +39,7 @@ public class PlayerProfile : MonoBehaviour {
 	[Space(10)]
 
 	[Header("AttributeBarPointCounts")]
+	[Space(5)]
 	public Text HPCount;
 	public Text APCount;
 	public Text MPCount;
@@ -44,6 +47,7 @@ public class PlayerProfile : MonoBehaviour {
 	[Space(10)]
 
 	[Header("AttributePointCounts")]
+	[Space(5)]
 	public Text FastHeavyCount;
 	public Text SmartStrongCount;
 	public Text LuckyHandyCount;
