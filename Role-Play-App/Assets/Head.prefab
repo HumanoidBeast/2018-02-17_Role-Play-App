@@ -989,17 +989,15 @@ MonoBehaviour:
   endurancePoints: 0
   psychoPoints: 0
   specialPoints: 0
-  FastHeavy: {fileID: 1332827036808766, guid: 9fa865fd9b6ede94b80cce136b5d3ab2, type: 2}
-  SmartStrong: {fileID: 1351509197616288, guid: 2f02926d33c94a149ab7a377bf260f63,
-    type: 2}
-  LuckyHandy: {fileID: 1011524323101666, guid: 7318a0cd41f4e4d46a5cc64a80ba3431, type: 2}
-  EmpathyInstincts: {fileID: 1266155215153872, guid: b4cab06935b54404aa5ecca0c1e6da24,
-    type: 2}
+  FastHeavy: {fileID: 0}
+  SmartStrong: {fileID: 0}
+  LuckyHandy: {fileID: 0}
+  EmpathyInstincts: {fileID: 0}
   healthbar: {fileID: 114164892567225088}
   endurancebar: {fileID: 114358284465171806}
   psychobar: {fileID: 114619062237355858}
   specialbar: {fileID: 114310025110136692}
-  HPCount: {fileID: 114255691693643306}
+  HPCount: {fileID: 0}
   APCount: {fileID: 114243206627422834}
   MPCount: {fileID: 114379011170748936}
   PPCount: {fileID: 114012598773110998}

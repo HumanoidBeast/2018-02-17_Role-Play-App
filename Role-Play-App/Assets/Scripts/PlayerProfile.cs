@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerProfile : MonoBehaviour {
+	
 	[Header("Player Stats")]
 
 	public int fastHeavy = 2;
@@ -17,6 +19,7 @@ public class PlayerProfile : MonoBehaviour {
 	public int endurancePoints;
 	public int psychoPoints;
 	public int specialPoints;
+
 	[Space(10)]
 	[Header("DropDown Attributes")]
 
@@ -60,6 +63,7 @@ public class PlayerProfile : MonoBehaviour {
 	private int realsmart;
 	private int reallucky;
 	private int realempathy;
+
 
 	public void Calc (int Value, string Name)
 	{
@@ -123,15 +127,21 @@ public class PlayerProfile : MonoBehaviour {
 	{
 		Calc (fastHeavy, FAST);
 		realfast = fast;
+		FastHeavyCount.text = fastHeavy.ToString();
 
 		Calc (smartStrong, SMART);
 		realsmart = smart;
+		SmartStrongCount.text = smartStrong.ToString();
 
 		Calc (luckyHandy, LUCKY);
 		reallucky = lucky;
+		LuckyHandyCount.text = luckyHandy.ToString();
 
 		Calc (empathyInstincts, EMPATHHY);
 		realempathy = empathy;
+		EmpathyInstinctsCount.text = empathyInstincts.ToString();
+
+
 				
 		lifePoints = 2 * fastHeavy + smartStrong + empathyInstincts;
 		setLife (healthbar, lifePoints);
@@ -167,6 +177,11 @@ public class PlayerProfile : MonoBehaviour {
 		Bar.value -= dmg;
 
 		Debug.Log ("damage taken: " + dmg.ToString());
+	}
+
+	public void LoadNextScene(string level)
+	{
+		SceneManager.LoadScene (level);
 	}
 
 }

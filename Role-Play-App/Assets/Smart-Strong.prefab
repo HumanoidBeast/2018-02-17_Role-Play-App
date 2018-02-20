@@ -490,7 +490,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114568517053572426, guid: c16f9b3aea83e234998717105c342424,
+          type: 2}
         m_MethodName: valueChangeSmartStrong
         m_Mode: 1
         m_Arguments:
