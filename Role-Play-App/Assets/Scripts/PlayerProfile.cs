@@ -12,6 +12,10 @@ public class PlayerProfile : MonoBehaviour {
 	public static int smartStrong;
 	public static int luckyHandy;
 	public static int empathyInstincts;
+	public int FH;
+	public int SS;
+	public int LH;
+	public int EI;
 	[Space(10)]
 
 
@@ -70,6 +74,11 @@ public class PlayerProfile : MonoBehaviour {
 
 	void Update()
 	{
+		FH = fastHeavy;
+		SS = smartStrong;
+		LH = luckyHandy;
+		EI = empathyInstincts;
+
 		Scene scene = SceneManager.GetActiveScene ();
 		if (scene.name != "Att-Selection") {
 			ReCalcStats ();
@@ -175,11 +184,11 @@ public class PlayerProfile : MonoBehaviour {
 
 		LuckyHandyCount.text = luckyHandy.ToString ();
 		setLife (psychobar, psychoPoints);
-		MPCount.text = psychoPoints.ToString();
+		PPCount.text = psychoPoints.ToString();
 
 		EmpathyInstinctsCount.text = empathyInstincts.ToString ();
 		setLife (specialbar, specialPoints);
-		PPCount.text = specialPoints.ToString();
+		MPCount.text = specialPoints.ToString();
 
 	}
 
