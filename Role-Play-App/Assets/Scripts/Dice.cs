@@ -16,26 +16,70 @@ public class Dice : MonoBehaviour {
 	public int LH;
 	public int EI;
 
-	void Update()
-	{
-		if (AttributeCount == 1) {//fastHeavy
-			FH = PlayerStats.GetComponent<PlayerProfile> ().FH;
-		}
-	}
 
 	public void SetAttribute()
 	{
 		AttributeCount = dropDownAttribute.GetComponent<Dropdown> ().value+1;
+		FH = PlayerStats.GetComponent<PlayerProfile> ().FH;
+		SS = PlayerStats.GetComponent<PlayerProfile> ().SS;
+		LH = PlayerStats.GetComponent<PlayerProfile> ().LH;
+		EI = PlayerStats.GetComponent<PlayerProfile> ().EI;
 	}
-
-
+		
 	public void RollDice()
 	{
 		if (dropDownAttribute == null) {
 			return;
 		}
-		rand = Random.Range (2, 6);
+			
+		rand = Random.Range (1, 7);
 		DiceC.text = rand.ToString ();
+
+
+		if (AttributeCount == 1) {//fast
+			Rollup(FH);
+		}
+		if (AttributeCount == 2) {//smart
+			Rollup(SS);
+		}
+		if (AttributeCount == 3) {//lucky
+			Rollup(LH);
+		}
+		if (AttributeCount == 4) {//Empathy
+			Rollup(EI);
+		}
+
+
+		if (AttributeCount == 5) {//heavy
+			Rolldown(FH);
+		}
+		if (AttributeCount == 6) {//strong
+			Rolldown(SS);
+		}
+		if (AttributeCount == 7) {//handy
+			Rolldown(LH);
+		}
+		if (AttributeCount == 8) {//instincts
+			Rolldown(EI);
+		}
+	}
+
+	void Rolldown(int Att)
+	{
+		if (rand <= Att) {
+			print ("U did it");
+		} else {
+			print ("Don't!");
+		}
+	}
+
+	void Rollup(int Att)
+	{
+		if (rand >= Att) {
+			print ("U did it");
+		} else {
+			print ("Don't!");
+		}
 	}
 		
 }
