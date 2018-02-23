@@ -57,12 +57,12 @@ GameObject:
   - component: {fileID: 222563821743305010}
   - component: {fileID: 114137041611629466}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlayerSheet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1116322988945324
 GameObject:
   m_ObjectHideFlags: 1
@@ -231,12 +231,12 @@ GameObject:
   - component: {fileID: 114031091892383590}
   - component: {fileID: 114312623057393346}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Plus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1613809186599362
 GameObject:
   m_ObjectHideFlags: 1
@@ -362,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670459070753576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.939255, y: 80.47583, z: 8.202854}
+  m_LocalPosition: {x: -49.049515, y: 32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224709344951113700}
@@ -643,16 +643,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114472009574327716, guid: 48706609e02221349aabb8a06ae4a0e1,
-          type: 2}
-        m_MethodName: LoadNextScene
-        m_Mode: 5
+      - m_Target: {fileID: 1085346023265170}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 2-1_
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1570072402505132}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
