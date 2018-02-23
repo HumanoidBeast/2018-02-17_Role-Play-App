@@ -687,6 +687,11 @@ Prefab:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 114015093546987960, guid: 9fa865fd9b6ede94b80cce136b5d3ab2,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fa865fd9b6ede94b80cce136b5d3ab2, type: 2}
   m_IsPrefabParent: 0

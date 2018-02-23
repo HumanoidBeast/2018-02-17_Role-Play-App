@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Att-Selection.unity
     guid: 86a755b73eaf2f74a8249ff44554d61d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Trial-Roll.unity
     guid: bdf1e9f79a6607f479f60a4978537556
