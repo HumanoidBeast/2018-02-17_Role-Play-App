@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.94482756, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -169,7 +169,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 89a2032478202f847ba09c6a02c8e44e, type: 3}
-    m_FontSize: 64
+    m_FontSize: 31
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Accept
+  m_Text: Calculate
 --- !u!222 &3531171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -668,12 +668,12 @@ Prefab:
     - target: {fileID: 114155163520244048, guid: 9fa865fd9b6ede94b80cce136b5d3ab2,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.9858012
+      value: 0.8922324
       objectReference: {fileID: 0}
     - target: {fileID: 114155163520244048, guid: 9fa865fd9b6ede94b80cce136b5d3ab2,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.85294116
+      value: 0.9158737
       objectReference: {fileID: 0}
     - target: {fileID: 114015093546987960, guid: 9fa865fd9b6ede94b80cce136b5d3ab2,
         type: 2}
@@ -691,6 +691,11 @@ Prefab:
         type: 2}
       propertyPath: m_Navigation.m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114155163520244048, guid: 9fa865fd9b6ede94b80cce136b5d3ab2,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.8897059
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fa865fd9b6ede94b80cce136b5d3ab2, type: 2}
@@ -800,12 +805,12 @@ Prefab:
     - target: {fileID: 114788457446267142, guid: 7318a0cd41f4e4d46a5cc64a80ba3431,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.9858012
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 114788457446267142, guid: 7318a0cd41f4e4d46a5cc64a80ba3431,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.85294116
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 114451113453317604, guid: 7318a0cd41f4e4d46a5cc64a80ba3431,
         type: 2}
@@ -816,6 +821,11 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788457446267142, guid: 7318a0cd41f4e4d46a5cc64a80ba3431,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7318a0cd41f4e4d46a5cc64a80ba3431, type: 2}
@@ -1004,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.94482756, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1024,7 +1034,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Trial
+  m_Text: 'Accept
 
 '
 --- !u!222 &1345704366
@@ -1056,7 +1066,7 @@ GameObject:
   - component: {fileID: 1459421629}
   - component: {fileID: 1459421628}
   m_Layer: 5
-  m_Name: Button Trail
+  m_Name: Accept-Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1078,8 +1088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000049343, y: -97.5}
-  m_SizeDelta: {x: 136.49, y: 45}
+  m_AnchoredPosition: {x: 34.12252, y: -14.109}
+  m_SizeDelta: {x: 68.25, y: 178.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459421628
 MonoBehaviour:
@@ -1128,7 +1138,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Trial-Roll
+          m_StringArgument: 2-2_Choose-Ability
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1145,7 +1155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07879623, g: 0.7372335, b: 0.909, a: 0.884}
+  m_Color: {r: 0, g: 0.60294116, b: 0.07515369, a: 0.884}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1402,7 +1412,7 @@ GameObject:
   - component: {fileID: 1908297242}
   - component: {fileID: 1908297241}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Calc-Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1424,8 +1434,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0012469, y: -0.000015259}
-  m_SizeDelta: {x: 136.49, y: 150}
+  m_AnchoredPosition: {x: -34.123005, y: -14.109478}
+  m_SizeDelta: {x: 68.24, y: 178.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908297241
 MonoBehaviour:
@@ -1491,7 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.078796186, g: 0.909, b: 0.147, a: 0.884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
