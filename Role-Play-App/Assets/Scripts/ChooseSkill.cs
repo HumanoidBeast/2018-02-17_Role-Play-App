@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class ChooseSkill : MonoBehaviour {
 
 
-	public static int Points = 0;
-	public static int MaxPoints = 3;
+	public int Points = 0;
+	public int MaxPoints = 3;
 	public static int PointPool = 10;
 	public Text Pool;
 	public Text SkillPoints;

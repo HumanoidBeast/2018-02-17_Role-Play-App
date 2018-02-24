@@ -513,6 +513,31 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 224488837793869988, guid: c779ced818660454b9df09fbc0c3bb35,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -31.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 224488837793869988, guid: c779ced818660454b9df09fbc0c3bb35,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 4.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 224040616740068856, guid: c779ced818660454b9df09fbc0c3bb35,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224207045006506790, guid: c779ced818660454b9df09fbc0c3bb35,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.595002
+      objectReference: {fileID: 0}
+    - target: {fileID: 224207045006506790, guid: c779ced818660454b9df09fbc0c3bb35,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 40.684105
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114025933315391988, guid: c779ced818660454b9df09fbc0c3bb35, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c779ced818660454b9df09fbc0c3bb35, type: 2}
@@ -1044,6 +1069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ae401226e58854fbec306bbd2d520c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Points: 0
+  MaxPoints: 3
   Pool: {fileID: 752163760}
   SkillPoints: {fileID: 153129454}
 --- !u!1001 &1856353942
