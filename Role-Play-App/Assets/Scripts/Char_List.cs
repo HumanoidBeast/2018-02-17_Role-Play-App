@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Char_List : MonoBehaviour {
+	[Header("Prefab's")]
+	public GameObject SheetPref;
 
-	public GameObject Prefab;
-	public Transform Sheet;
+	[Space(1)][Header("SpawnPositon")]
+	public GameObject SheetPos;
 
+	GameObject CharacterSheet;
 
-	GameObject ListObject;
-
-
-
-	void Start(){
-		ListObject = Instantiate (Prefab, Sheet);
-		ListObject = GameObject.Find ("PlayerSheet");
-		ListObject.SetActive (false);
-
-	}
 
 	public void AddList(){
-		ListObject = Instantiate (Prefab, Sheet);
+		CharacterSheet = Instantiate (SheetPref,SheetPos.transform) as GameObject;
+		Destroy (this);
+
 
 
 	}
-	
+
 
 }
