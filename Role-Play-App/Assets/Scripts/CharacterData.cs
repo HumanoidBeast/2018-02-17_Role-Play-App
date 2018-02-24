@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterData : MonoBehaviour {
 
-	Transform inputName;
-	// Use this for initialization
-	void Start () {
-		inputName = gameObject.transform.Find ("inputName");
-		print (inputName);
-	}
-	
-	// Update is called once per frame
+	public InputField nameField;
+	public InputField raceField;
+	public InputField originField;
+	public InputField universeField;
+	public InputField ageField;
+
+	public string charName;
+	public string raceName;
+	public string originName;
+	public string universeName;
+	public string ageName;
+
 	void Update () {
-		print (inputName);
+		
+		charName = nameField.text;
+		raceName = raceField.text;
+		originName = originField.text;
+		universeName = universeField.text;
+		ageName = ageField.text;
+
 	}
+
 }
