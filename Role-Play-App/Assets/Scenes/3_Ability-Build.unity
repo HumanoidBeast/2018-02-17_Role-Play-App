@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 79345537}
   - component: {fileID: 79345536}
   m_Layer: 5
-  m_Name: Thirtyminutes
+  m_Name: TimeTier2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 106068109}
   - component: {fileID: 106068108}
   m_Layer: 5
-  m_Name: Threehours
+  m_Name: TimeTier3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,6 +436,51 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 106068106}
+--- !u!1 &113376270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 113376271}
+  - component: {fileID: 113376272}
+  m_Layer: 5
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &113376271
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113376270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1290083345}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &113376272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113376270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027dd744e11bbec40a2a984d2488ca0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &179902736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1336,7 @@ GameObject:
   - component: {fileID: 451710356}
   - component: {fileID: 451710355}
   m_Layer: 5
-  m_Name: Day
+  m_Name: TimeTier4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2582,6 +2627,7 @@ RectTransform:
   - {fileID: 1888553063}
   - {fileID: 1482590463}
   - {fileID: 729969976}
+  - {fileID: 113376271}
   m_Father: {fileID: 1484310036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2601,12 +2647,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556e6fb2212cd614489536d88ee22aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Minute: {fileID: 1434249740}
-  HalfHour: {fileID: 79345534}
-  ThreeHours: {fileID: 106068106}
-  Day: {fileID: 451710353}
+  TimeTier1: {fileID: 1434249740}
+  TimeTier2: {fileID: 79345534}
+  TimeTier3: {fileID: 106068106}
+  TimeTier4: {fileID: 451710353}
   durationDisplay: {fileID: 1082274481}
   Duration: 10
+  tierZeroValue: 10
+  tierZeroText: A few seconds
+  tierOneValue: 60
+  tierOneText: One minute
+  tierTwoValue: 1800
+  tierTwoText: Half an hour
+  tierThreeValue: 9600
+  tierThreeText: Three Hours
+  tierFourValue: 76800
+  tierFourText: All day long
   Special: {fileID: 308217446}
   Normal: {fileID: 326534824}
   special: 0
@@ -2879,7 +2935,7 @@ GameObject:
   - component: {fileID: 1434249743}
   - component: {fileID: 1434249742}
   m_Layer: 5
-  m_Name: Minute
+  m_Name: TimeTier1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
