@@ -7,6 +7,26 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour {
 
+	public string LoadFile;
+
+
+	public string abilityName;
+
+	public bool special;
+
+	public int clock;
+
+	public string attributeOne;
+	public string attributeTwo;
+	public string attributeThree;
+
+	public string energyType;
+	public int energyValue;
+
+	public string damageType;
+	public int damageValue;
+	public bool heal;
+
 	public static SaveManager save;
 	// Use this for initialization
 	void Awake () {
@@ -18,30 +38,49 @@ public class SaveManager : MonoBehaviour {
 		}
 	}
 	public void Save(){
+		string SaveFileName = "/" + abilityName + ".dat";
 		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file = File.Create (Application.persistentDataPath + "/saveData.dat");
+		FileStream file = File.Create (Application.persistentDataPath + "/"+ SaveFileName +".dat");
 
-		SaveData data = new SaveData ();
+		AbilityData data = new AbilityData ();
 		//Write all Values to save: data.health = health;
+
+		data.abilityName = abilityName;
 
 		bf.Serialize (file, data);
 		file.Close ();
 	}	
 	public void Load(){
-		if (File.Exists (Application.persistentDataPath + "/saveData.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Open (Application.persistentDataPath + "/saveData.dat", FileMode.Open);
-			SaveData data = (SaveData)bf.Deserialize (file);
+			FileStream file = File.Open (Application.persistentDataPath + "/" + LoadFile, FileMode.Open);
+			AbilityData data = (AbilityData)bf.Deserialize (file);
+
+			abilityName = data.abilityName;
+
 			file.Close ();
 			//Write all Values to load: health = data.health;
-
-		}	
+	
 	}
 
 }
 [Serializable]
-class SaveData
+class AbilityData
 {
-		//Write all Datatypes that you wanna be able to Store here: public int health;
+	public string abilityName;
+
+	public bool special;
+
+	public int clock;
+
+	public string attributeOne;
+	public string attributeTwo;
+	public string attributeThree;
+
+	public string energyType;
+	public int energyValue;
+
+	public string damageType;
+	public int damageValue;
+	public bool heal;
 
 }
