@@ -19,18 +19,19 @@ public class AbillityList : MonoBehaviour {
 
 	void Start(){
 		SetDown = setdown;
+		AbilityLoad ();
 
 	}
 
 
 
-	void Update(){
+	public void AbilityLoad(){
 
 		DirectoryInfo dir = new DirectoryInfo (Application.persistentDataPath);
 		FileInfo[] info = dir.GetFiles ("*.dat");
-		foreach (FileInfo AbillityFile in info) {
+		foreach (FileInfo AbilityFile in info) {
 			//print (Herofile.Name);#
-			SaveManager.save.LoadFile = AbillityFile.Name;
+			SaveManager.save.LoadFile = AbilityFile.Name;
 			SaveManager.save.Load();
 
 			AddSheet (SaveManager.save.abilityName);
@@ -45,7 +46,7 @@ public class AbillityList : MonoBehaviour {
 		Sheet = Instantiate (SheetPref,SheetPos);
 		Sheet.transform.position += new Vector3 (0 , -SetDown, 0);
 		AbiliSheet = Sheet.transform.Find ("AbilitySheet").gameObject;
-		AbiliName = AbiliSheet.transform.Find ("Ability-Name").gameObject;
+		AbiliName = AbiliSheet.transform.Find ("AbilityName").gameObject;
 		AbiliName.GetComponent<Text> ().text = Name;
 
 		SetDown += setdown;

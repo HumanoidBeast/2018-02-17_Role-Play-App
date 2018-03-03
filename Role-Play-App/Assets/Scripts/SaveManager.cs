@@ -46,6 +46,7 @@ public class SaveManager : MonoBehaviour {
 		//Write all Values to save: data.health = health;
 
 		data.abilityName = abilityName;
+		Debug.Log ("Saved to:" + Application.persistentDataPath);
 
 		bf.Serialize (file, data);
 		file.Close ();
@@ -61,6 +62,7 @@ public class SaveManager : MonoBehaviour {
 			//Write all Values to load: health = data.health;
 	
 	}
+
 
 }
 [Serializable]
